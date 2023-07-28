@@ -1,14 +1,14 @@
 
 // No lo permite hacer
-// let const = 123; porque const es una palanra reservada
+// let const = 123; porque const es una palabra reservada
 let constante = 123; // La unica forma de que sirva
 
 
 // Alguns palabras reservadas
 
-// const
+// const 
 
-// if
+// if  
 
 // try
 
