@@ -44,3 +44,35 @@ console.log('Ultima moto:', personaje['ultima-moto']); // Para obtener el valor 
 // debo llamar a esa propiedad accediendo al objeto literal y dentro de [] colocar la llave con sus respctivas comillas
 // pueden ser sencillas o dobles
 
+// Mas detalles
+
+// Con esto borramos una propiedad de mi objeto literal
+delete personaje.edad;
+console.log({personaje});
+
+// Aca convertimos mi objeto lieral en un array
+const entriesPares = Object.entries(personaje);
+console.log(entriesPares);
+
+// Con esto puedo agregar una nueva propiedad a mi Objeto Literal
+personaje.casado = false;
+
+// Con esto lo que hago es bloquear la eliminacion o modificadion de mi objeto literal en sus propiedades directas
+// Pero si me perimte modificar los objetos o arreglos que esten dentro de mi otro objeto
+Object.freeze(personaje);
+
+personaje.direccion.ciudad = 'Medellin'; // Ejemplo de un objeto dentro de mi objeto
+personaje.salario = 1000000000;
+console.log(personaje);
+
+// Con esto lo que hago es mostrar las propiedades que  conforman mi objeto, retorna un ARRAY
+const propiedades = Object.getOwnPropertyNames(personaje);
+console.log({propiedades});
+
+// Si quiero que me muestre los valores de esas propiedades me retorna un array
+const valores = Object.values(personaje);
+console.log({valores});
+
+
+
+
