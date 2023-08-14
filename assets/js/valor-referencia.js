@@ -19,7 +19,7 @@ const cambiaNombre = ( {...persona} ) => {  // Tambien uso el operador spret
 };
 
 let peter = {nombre: 'Peter'};
-let tony  = cambiaNombre( {...peter} ); // aca tambien uso el operador spret
+let tony  = cambiaNombre({...peter}); // aca tambien uso el operador spret
 
 console.log({peter, tony});
 
@@ -33,10 +33,12 @@ const frutas      = ['Manzana', 'Pera', 'Piña'];
 
 console.time('Slice'); // Con esto mido el tiempo de ejecucion y coloco una bandera
 const masFrutas = frutas.slice();
+masFrutas.push('Melon'); // Con esto agrego otro elemento a mi array
 console.timeEnd('Slice');
 
 console.time('Spread');
 const otrasFrutas = [...frutas];
+otrasFrutas.push('Papaya');
 console.timeEnd('Spread');
 
 console.table({frutas, otrasFrutas, masFrutas});
