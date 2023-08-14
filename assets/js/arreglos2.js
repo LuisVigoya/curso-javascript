@@ -8,12 +8,13 @@ let ultimo = juegos[ juegos.length - 1]; // Puedo hacer esta operaciones dentro 
 console.log({primero, ultimo});
 
 // Con el forEach el va a ir por cada elemento y va a hacer algo
+// arr es el arreglo
 juegos.forEach( (elemento, indice, arr) => {  
     console.log({elemento, indice, arr});
 });
 
 // Con el push lo que hago es agregar un nuevo elemento a mi Array y este me retorna el nuevo tamaño de nuestro Array 
-// RETORNA un nuemero
+// RETORNA un numero
 let nuevaLongitud = juegos.push('Halo');
 console.log({nuevaLongitud, juegos});
 
