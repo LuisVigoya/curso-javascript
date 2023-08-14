@@ -43,6 +43,9 @@ if (dia === 2) {
     console.log('Hoy no es', diaLetras[2]);
 };
 
+// sin usar if
+console.log('Hoy es ejemplo sin if:', diaLetras[dia]);
+
 // Usando un Array
 
 let diaLetras2 = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
@@ -55,3 +58,16 @@ if (dia === 2) {
 
 // Forma sencilla sin usar if
 console.log('Hoy es:', diaLetras2[dia] || 'Dia de la semana no valido'); 
+
+// Cuando mi objeto literal tiene una funcion de flecha
+let diaLetras3 = {
+    0: ()=> 'Domingo - 0',
+    1: ()=> 'Lunes - 1',
+    2: ()=> 'Martes - 2',
+    3: ()=> 'Miercoles - 3',
+    4: ()=> 'Jueves - 4',
+    5: ()=> 'Viernes - 5',
+    6: ()=> 'Sabado - 6', 
+};
+
+console.log(diaLetras3[dia]()); // Forma para ejecutar una funcion si nuestro objeto literal esta compuesto de ellas 
